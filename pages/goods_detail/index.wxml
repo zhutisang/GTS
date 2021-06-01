@@ -1,0 +1,42 @@
+<!--pages/goods_detail/index.wxml-->
+<!--滚动页面-->
+<scroll-view scroll-y>
+<!--商品属性-->
+<view class="details">
+<image src="{{goods.img}}"></image>
+<view>
+<text style="padding:10rpx">{{goods.txt}}</text>
+<text style="color:rgb(248, 131, 35)">{{goods.price}}</text>
+</view>
+</view>
+<!--商品相关参数-->
+<view class="details_list"> 
+<view class="param">
+<text>发货<text style="position:relative;left:20%">快递</text></text>
+<text>保障</text>
+<text>参数</text>
+</view>
+</view>
+<!--导航栏-->
+<view class="nav"  bindtap="sum">
+<view style="font-size:35rpx" class=" b1_box"><view class=".t-icon .t-icon-kefu" ></view>客服</view>
+<view style="font-size:35rpx" class=" b1_box"><view class=".t-icon .t-icon-shoucang"></view>收藏</view>
+<view id="cart" style="background-color:  rgb(248, 166, 12);color:rgb(238, 238, 238);border-radius:65rpx 0 0 65rpx" class="b_box " bindtap="change">加入购物车
+</view>
+<view id="shop" style="background-color: rgb(248, 106, 12);color:rgb(238, 238, 238);border-radius:0 65rpx 65rpx 0" class="b_box shop" catchtap="sum">立即购买
+</view>
+</view>
+<view class="shop_hide">
+<!--选择数量-->
+<view class="num">
+<view class=".t-icon .t-icon-jian" bindtap="minus_num"></view>
+<view class="cur_num">{{nums}}</view>
+<view class=".t-icon .t-icon-jia" bindtap="add_num"></view>
+</view>
+</view>
+<!--提示框-->
+<view class=" {{showView?'hide':'cart_message'}}">
+已加入购物车
+</view>
+</scroll-view>
+

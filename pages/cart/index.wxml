@@ -1,0 +1,34 @@
+<!--pages/cart/index.wxml-->
+<!--商品框-->
+<scroll-view scroll-y catchtap="close_sm">
+<view class="title" bindtap="onShow">购物车({{lists.length}})<view bindtap="manage">{{manage_text}}</view>
+</view>
+<checkbox-group class="group" bindchange="checkboxChange">
+<view class="deal">
+<checkbox class="ck_box_all" checked="{{checkedValue}}" bindtap="checkboxChangeAll" disabled="{{all_check_true}}" >全选</checkbox>
+<view class="one_btn_del" bindtap="once_del">{{clear}}</view>
+<view class="deal_btn" bindtap="delete">{{deal_delete}}</view>
+</view>
+<view class="cart_box" wx:for="{{lists}}" wx:for-item = 'item1' data-index="{{index}}" catchtap="get_index">
+<checkbox class="ck_box" value="{{item1.name}}" checked="{{item1.checked}}"></checkbox>
+<image class="png" src="{{item1.img}}" />
+<view class="txt_container" >
+<view class="name">{{item1.txt}}</view>
+<!--价格和数量-->
+<view class="price_num">
+<view class="price" >{{item1.sums}}</view>
+<view class="sm_cur_nums" hidden="{{s1}}" bindtap="nums_style_change" data-index="{{index}}">x {{item1.nums}}</view>
+<view class="cur_nums" hidden="{{s2}}">
+<view class=".t-icon .t-icon-jian" bindtap="minus_num" hidden="{{s2}}"></view>
+<view class="cur_num" hidden="{{s2}}" >{{item1.nums}}</view>
+<view class=".t-icon .t-icon-jia" bindtap="add_num" hidden="{{s2}}"></view>
+</view>
+</view>
+</view >
+</view>
+</checkbox-group>
+</scroll-view>
+
+
+
+

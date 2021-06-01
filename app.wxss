@@ -1,0 +1,14 @@
+
+@import "./iconfont/iconfont-weapp/iconfont-weapp-icon.wxss";
+page,view,text,swiper,swiper-item,image,navigator{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+page{
+                                                                                      /*主题颜色*/
+      --themeColor:#44eb8f;
+      font-size: 28rpx;                                                                                
+                                                                                   
+}

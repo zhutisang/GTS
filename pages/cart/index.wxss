@@ -1,0 +1,171 @@
+/* pages/cart/index.wxss */
+page{
+  display: flex;
+  height: 100%;
+  background-color: rgb(241, 241, 241);
+}
+.title{
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size:50rpx;
+  left: 15rpx;
+  font-weight: bolder;
+  color: rgb(56, 56, 56);
+  width: 100%;
+  height: 10%;
+  background-color: #fff;
+}
+.title view{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100rpx;
+  height: 50rpx;
+  position: relative;
+  left: 53%;
+  font-size: 30rpx;
+  font-weight: lighter;
+  color: rgb(255, 136, 0);
+  background-color: rgb(255, 255, 255);
+  border-radius: 25rpx;
+}
+scroll-view{
+  display: flex;
+  height: 93%; 
+  white-space: nowrap;
+}
+.group{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.cart_box{
+  display: flex;
+  position: relative;
+  height: 25%;
+  align-items: center;
+  width: 95%;
+  flex-direction: row;
+  background-color: #fff;
+  border-radius: 30rpx;
+  margin-bottom: 10px;
+}
+.ck_box{
+  position: relative;
+  left: 4%;
+}
+.ck_box .wx-checkbox-input{
+  border-radius: 50%;
+}
+.png{
+  height: 80%;
+  width: 37%;
+  position: relative;
+  left: 7%;
+}
+.txt_container{
+  position: relative;
+  left: 15%;
+  font-size: 30rpx;
+  font-weight: bolder;
+  height: 250rpx;
+  width: 280rpx;
+}
+.name{
+  height: 15%;
+  font-size: 35rpx;
+}
+.price_num{
+   width: 100%;
+   height: 85%;
+}
+.price{
+  color: rgb(248, 131, 35);
+  font-size: 40rpx;
+  position: absolute;
+  top: 75%;
+  right: 70%;
+}
+.sm_cur_nums{
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  font-size: 40rpx;
+  color: rgb(75, 75, 75);
+  border: solid;
+  border-radius: 30rpx;
+  border-color: rgb(216, 216, 216);
+}
+
+.cur_nums{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: solid;
+  border-radius: 50px;
+  border-color: rgb(0, 255, 98);
+  width: 60%;
+  position: absolute;
+  left: 40%;
+  top: 75%;
+}
+.cur_nums view{
+  color: rgb(75, 75, 75);
+  width: 30px;
+  height: 30px;
+}
+.cur_num{
+    font-size: 18px;
+    position: relative;
+    left: 9px;
+    top: 3px; 
+}
+.deal{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  height: 7%;
+  display: flex;
+  align-items: center;
+}
+.ck_box_all{
+  position:relative;
+  left:6.5%;
+  color: rgb(151, 151, 151);
+}
+.ck_box_all .wx-checkbox-input{
+  border-radius: 50%;
+}
+.one_btn_del{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: 80%;
+  position: relative;
+  left: 45%;
+  color: rgb(168, 168, 168);
+  background-color: rgb(255, 255, 255);
+}
+.deal_btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 48%;
+  background-color: rgb(253, 152, 0);
+  width: 25%;
+  height: 80%;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 35rpx;
+}

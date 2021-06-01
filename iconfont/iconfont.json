@@ -1,0 +1,261 @@
+{
+  "id": "2406486",
+  "name": "网上商城demo",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1319164",
+      "name": "水果",
+      "font_class": "shuiguo",
+      "unicode": "e680",
+      "unicode_decimal": 59008
+    },
+    {
+      "icon_id": "5076637",
+      "name": "牛奶",
+      "font_class": "niunai",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "5085939",
+      "name": "蛋",
+      "font_class": "dan",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "5085950",
+      "name": "肉",
+      "font_class": "rou",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "5126042",
+      "name": "海鲜",
+      "font_class": "haixian",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "5218775",
+      "name": "调料",
+      "font_class": "tiaoliao",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "7795604",
+      "name": "速食",
+      "font_class": "sushi",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "8146527",
+      "name": "蔬菜",
+      "font_class": "Vegetables-",
+      "unicode": "e640",
+      "unicode_decimal": 58944
+    },
+    {
+      "icon_id": "20240301",
+      "name": "我的",
+      "font_class": "wode-copy",
+      "unicode": "e7fd",
+      "unicode_decimal": 59389
+    },
+    {
+      "icon_id": "525996",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "554475",
+      "name": "展开",
+      "font_class": "iconset0441",
+      "unicode": "e740",
+      "unicode_decimal": 59200
+    },
+    {
+      "icon_id": "689262",
+      "name": "类目 品类 分类 类别",
+      "font_class": "leimupinleifenleileibie",
+      "unicode": "e7f9",
+      "unicode_decimal": 59385
+    },
+    {
+      "icon_id": "839006",
+      "name": "加",
+      "font_class": "jia",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
+      "icon_id": "1304875",
+      "name": "减",
+      "font_class": "jian",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "2116265",
+      "name": "地址",
+      "font_class": "address_icon",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "2672191",
+      "name": "相机",
+      "font_class": "xiangji",
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    },
+    {
+      "icon_id": "3847401",
+      "name": "客服",
+      "font_class": "kefu",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "4272327",
+      "name": "返回",
+      "font_class": "fanhui",
+      "unicode": "e682",
+      "unicode_decimal": 59010
+    },
+    {
+      "icon_id": "4685740",
+      "name": "扫码",
+      "font_class": "Group-",
+      "unicode": "e69a",
+      "unicode_decimal": 59034
+    },
+    {
+      "icon_id": "5532897",
+      "name": "取消",
+      "font_class": "quxiao",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "7832284",
+      "name": "订单",
+      "font_class": "dingdan",
+      "unicode": "e6a3",
+      "unicode_decimal": 59043
+    },
+    {
+      "icon_id": "8300928",
+      "name": "待收货",
+      "font_class": "daishouhuo",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "8361786",
+      "name": "购物车",
+      "font_class": "gouwuche",
+      "unicode": "e6c1",
+      "unicode_decimal": 59073
+    },
+    {
+      "icon_id": "11082522",
+      "name": "首页",
+      "font_class": "dibutubiao_shouye",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "11519477",
+      "name": "我的",
+      "font_class": "wode",
+      "unicode": "e735",
+      "unicode_decimal": 59189
+    },
+    {
+      "icon_id": "14015794",
+      "name": "-_配送商",
+      "font_class": "-_peisongshang",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "14046413",
+      "name": "收藏",
+      "font_class": "shoucang",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "14112876",
+      "name": "售后",
+      "font_class": "shouhou",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "15346605",
+      "name": "投诉",
+      "font_class": "tousu",
+      "unicode": "e6a9",
+      "unicode_decimal": 59049
+    },
+    {
+      "icon_id": "18311748",
+      "name": "电 话",
+      "font_class": "dianhua",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "18738944",
+      "name": "收藏",
+      "font_class": "shoucang1",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "18781862",
+      "name": "评论",
+      "font_class": "pinglun",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "19254962",
+      "name": "分 享",
+      "font_class": "fenxiang",
+      "unicode": "e6d1",
+      "unicode_decimal": 59089
+    },
+    {
+      "icon_id": "20240264",
+      "name": "首页",
+      "font_class": "dibutubiao_shouye-copy",
+      "unicode": "e7fa",
+      "unicode_decimal": 59386
+    },
+    {
+      "icon_id": "20240282",
+      "name": "类目 品类 分类 类别",
+      "font_class": "leimupinleifenleileibie-copy",
+      "unicode": "e7fb",
+      "unicode_decimal": 59387
+    },
+    {
+      "icon_id": "20240292",
+      "name": "购物车",
+      "font_class": "gouwuche-copy",
+      "unicode": "e7fc",
+      "unicode_decimal": 59388
+    }
+  ]
+}

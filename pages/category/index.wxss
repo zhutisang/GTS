@@ -1,0 +1,62 @@
+/* pages/category/index.wxss */
+page{
+  height: 100%;
+}
+.category{
+  height: 100%;
+
+}
+.cate_container{
+  height: 100%;
+  display: flex;
+
+}
+.left_menu{
+  display: flex;
+  width: 30%;
+  height: 100%;
+  background-color: rgb(243, 243, 243);
+  
+}
+.menu_item{
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  color: rgb(114, 114, 114);
+}
+.active{
+  color:  rgb(248, 131, 35);
+  border-left: 5rpx solid currentColor;
+}
+
+.menu1_detail{
+  display: flex;
+  height: 180rpx;
+  width: 100%;
+  border-style: solid;
+  border-color: rgb(240, 240, 240);
+  
+}
+.png{
+  height: 180rpx;
+  width: 180rpx;
+}
+.txt_container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.name{
+  display: flex;
+  justify-content: start;
+  padding: 15rpx 15rpx 0rpx 15rpx;
+}
+.price{
+  display: flex;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  color: rgb(248, 131, 35);
+}

@@ -1,0 +1,24 @@
+<!--start--用户信息栏-->
+<view class="user_info">
+      <image class="user_img" src="../../icons/cart.png"></image>
+      <view class="user_name">{{userinfo.nickName}}</view>
+      <button class="user_login" bindtap="login" style="width:220rpx;height:70rpx;display:{{hide}}">用户登录</button>
+</view>
+<!--end--用户信息栏-->
+
+<!--start--功能栏-->
+<navigator class="navigate">
+<view class="collect" style="background-image: linear-gradient(#9c8fff, #d1cbff);">
+<text class=".t-icon .t-icon-shoucang"></text>收藏
+</view>
+<view class="order" style="background-image: linear-gradient(#46cbff, #9de3ff);">
+<text class=".t-icon .t-icon-dingdan"></text>订单
+</view>
+<view class="shipped " style="background-image: linear-gradient(#2e70ff, #abbeff);">
+<text class=".t-icon .t-icon-daishouhuo" ></text>收货
+</view>
+<view class="after_sale " style="background-image: linear-gradient(#ef42ff, #f8a8ff);">
+<text class=".t-icon .t-icon-shouhou"></text>售后
+</view>
+</navigator>
+<!--end--功能栏-->

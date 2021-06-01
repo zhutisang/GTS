@@ -1,0 +1,10 @@
+<!--搜索框start-->
+
+<view class="search_input">
+  <navigator url="/pages/search/index" open-type="navigate">
+    <text class="iconfont icon-sousuo"></text>
+    <view class="xj" url="/pages/category/index"><text class="iconfont icon-xiangji"></text></view>
+  </navigator>
+</view>
+
+<!--搜索框end-->

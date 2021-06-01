@@ -1,0 +1,85 @@
+@import "../../iconfont/iconfont-weapp/icon/icon.wxss";
+.login{
+  background-color: rgb(255, 130, 47);
+  color: aliceblue;
+  font-size: 30rpx;
+  position: fixed;
+  right: 10rpx;
+  border-radius: 30rpx;
+  margin:10rpx;
+}
+.user_info{
+    height: 20vh;
+    border: solid;
+    border-color: rgb(243, 243, 243);
+    border-bottom-color: rgb(228, 228, 228);
+    border-bottom-width: 10rpx;
+    border-radius: 30rpx;
+    position: fixed;
+    left: 50rpx;
+    right: 50rpx;
+    top: 20rpx; 
+}
+
+.user_img{
+  display: flex;
+  height:160rpx;
+  width: 160rpx;
+  border-radius: 50%;
+  position: fixed;
+  margin:50rpx 50rpx 50rpx 20rpx;
+}
+
+.user_name{
+  position: fixed;
+  left: 38%;
+  top: 5%;
+  font-size: 40rpx;
+}
+
+.user_login{
+  float: right;
+  background-color: rgb(107, 255, 102);
+  color: aliceblue;
+  font-style: normal;
+  font-size:31rpx ;
+  
+}
+.navigate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 50%;   
+    position: fixed;
+    left: 50rpx;
+    right: 50rpx;
+    top: 25%;
+    font-size: 60rpx;    
+}
+
+.navigate view{
+  display: flex;
+  border: solid;
+  border-color: rgb(231, 231, 231);
+  border-radius: 30rpx;
+  width: 45%;
+  height: 45%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rpx;
+  color: rgb(36, 36, 36);
+  flex-direction: row;
+  margin: 15rpx;
+  border-bottom:solid ;
+  border-bottom-color: rgb(228, 228, 228);
+  border-bottom-width: 10rpx;
+  padding: 5rpx;
+  color: #ffecec;
+  
+  
+
+}
+.dada{background-color: #9c8fff;
+background-image: linear-gradient(#ef42ff, #f8a8ff);}
+

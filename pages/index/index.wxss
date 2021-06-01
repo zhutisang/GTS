@@ -1,0 +1,84 @@
+/*  strat 轮播图 */
+page{
+  background-color: rgb(241, 241, 241);
+}
+.swiper-box {
+  background-color: rgb(241, 241,241);
+  height: 300rpx;
+  overflow: hidden;
+  padding: 5px;
+  border-radius: 20px; 
+}
+.home-banner {
+  width: 100%;
+  height: 300rpx;
+}
+.index_swiper image {
+  width: 100%;
+  height: 100%;
+}
+/* end 轮播图*/
+/* 导航栏 */
+.index_category {
+  display: flex;
+  height: 370rpx;
+  width: 100%;
+}
+.index_category view {
+
+  padding: 1px 0px 0px 7px;
+  justify-content: center;
+}
+.index_category view image {
+  width: 179rpx;
+  height: 178rpx;
+  background-color: #fff;
+  border-radius: 100rpx;
+  margin: 1px;
+}
+.index_title{
+  display: flex;
+  justify-content: center;
+  border-style: solid;
+  border-color:rgb(241, 241, 241);
+  width:300rx ;
+  height: 200rpx;
+}
+.index_title image{
+  width: 50%;
+  height: 250rpx;
+  justify-content: center;
+}
+
+.index_floor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+   
+}
+.index_floor image{
+  width: 355rpx;
+  height: 355rpx;
+  display: flex;
+  border-style: solid;
+  border-color: rgb(221, 220, 220);
+
+}
+.floor_txt{
+  display: flex;
+  width: 352.5rpx;
+  height: 123rpx;
+  font-size: 30rpx;
+  color: rgb(114, 113, 113);
+  background-color: #fff;
+  padding: 3px;
+}
+.floor_price{
+  display: flex;
+  background-color: #fff;
+  color: rgb(248, 131, 35);
+  margin: 0px 0px 3px 0px;
+  padding: 3px;
+}

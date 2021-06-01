@@ -1,0 +1,27 @@
+@import "../../styles/icon_font.wxss";
+.search_input {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 60rpx;
+  padding: 10rpx;
+  background-color: var(--themeColor);
+}
+.search_input navigator {
+  
+  height: 100%;
+  width: 95%;
+  display: flex;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15rpx;
+  color: darkgray;
+  display: flex;
+}
+.xj{
+  position: absolute;
+  right: 40rpx;
+
+}

@@ -1,0 +1,48 @@
+<!--搜索框start-->
+<view class="sc_index">
+  <searchInput></searchInput>
+</view>            
+<!--搜索框end-->     
+
+<!--轮播图start-->
+<view class="swiper-box">
+  <swiper class="index_swiper" indicator-dots="true" autoplay="true" indicator-color="rgba(255,255,255,0.4)" indicator-active-color="rgba(255,255,255,1)" circular='true' interval="3000" duration="1000">
+    <block wx:key="unique" wx:for="{{slider}}" wx:for-index="index">
+      <swiper-item>
+        <image class="banner-img" src="{{item.img}}" bindtap='clickBanner' data-id="{{item}}" data-banner="{{item}}" data-index="{{index}}" class="slide-image" mode="aspectFill" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!--轮播图end-->
+
+<!--分类start-->
+<view class="index_category" >
+<view url="../goodS_list/index">
+  <block wx:key="unique" wx:for="{{category}}" wx:for-index="index" >
+  <image src="{{item.img}}" bindtap="handleItemTap" /> 
+  </block>
+  </view>
+</view>
+<!--分类end-->
+
+<!--好货先抢start-->
+<view class="index_title">
+  <image src="http://tiebapic.baidu.com/forum/w%3D580/sign=d942906719f41bd5da53e8fc61db81a0/01fcab64034f78f0536aedbf6e310a55b3191c2e.jpg" ></image>
+</view>
+<!--好货先抢end-->
+
+<!--商品start-->
+<view class="index_floor_box">
+<view class="index_floor">
+ <!--图片-->
+  <view class="floor_group" wx:for="{{floor}}" wx:for-index="index" >
+    <image  src="{{item.img}}"/>
+   <!--商品介绍-->
+    <view class="floor_txt">{{item.txt}}</view>
+    <!--商品价格-->
+    <view class="floor_price">{{item.price}}</view>
+  </view>
+</view>
+</view>
+<!--商品end-->
