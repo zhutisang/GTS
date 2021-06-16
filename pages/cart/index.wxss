@@ -7,14 +7,15 @@ page{
 .title{
   display: flex;
   align-items: center;
-  position: relative;
   font-size:50rpx;
-  left: 15rpx;
   font-weight: bolder;
   color: rgb(56, 56, 56);
   width: 100%;
   height: 10%;
   background-color: #fff;
+}
+.title text{
+  margin-left: 20rpx;
 }
 .title view{
   display: flex;
@@ -29,6 +30,16 @@ page{
   color: rgb(255, 136, 0);
   background-color: rgb(255, 255, 255);
   border-radius: 25rpx;
+}
+.title button{
+  display: flex;
+  position: absolute;
+  right: 40%;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  background-color: rgb(252, 116, 5);
+  border-radius: 30rpx;
+  font-weight: lighter;
 }
 scroll-view{
   display: flex;
@@ -50,7 +61,7 @@ scroll-view{
   flex-direction: row;
   background-color: #fff;
   border-radius: 30rpx;
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 .ck_box{
   position: relative;
@@ -61,41 +72,52 @@ scroll-view{
 }
 .png{
   height: 80%;
-  width: 37%;
+  width: 35%;
   position: relative;
   left: 7%;
 }
 .txt_container{
   position: relative;
-  left: 15%;
+  left: 10%;
   font-size: 30rpx;
   font-weight: bolder;
   height: 250rpx;
-  width: 280rpx;
+  width: 330rpx;
 }
 .name{
-  height: 15%;
+  display: flex;
+  height: 50rpx;
+  width: 100%;
   font-size: 35rpx;
 }
+.name text{
+  height: 100%;
+  font-weight: lighter;
+  flex-wrap: nowrap;
+  white-space: normal;
+}
 .price_num{
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 20%;
    width: 100%;
-   height: 85%;
+   height: 70%;
 }
 .price{
   color: rgb(248, 131, 35);
   font-size: 40rpx;
   position: absolute;
-  top: 75%;
-  right: 70%;
+  bottom:20%;
 }
 .sm_cur_nums{
-  position: absolute;
-  left: 50%;
-  top: 75%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
   width: 40%;
   font-size: 40rpx;
   color: rgb(75, 75, 75);
@@ -112,10 +134,10 @@ scroll-view{
   border: solid;
   border-radius: 50px;
   border-color: rgb(0, 255, 98);
-  width: 60%;
+  width: 50%;
   position: absolute;
-  left: 40%;
-  top: 75%;
+  left: 50%;
+  top: 50%;
 }
 .cur_nums view{
   color: rgb(75, 75, 75);
@@ -145,6 +167,17 @@ scroll-view{
 .ck_box_all .wx-checkbox-input{
   border-radius: 50%;
 }
+.total{
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 10%;
+  color: rgb(151, 151, 151);
+}
+.total text{
+  color: rgb(70, 70, 70);
+  font-size: 40rpx;
+}
 .one_btn_del{
   display: flex;
   align-items: center;
@@ -152,7 +185,7 @@ scroll-view{
   width: 10%;
   height: 80%;
   position: relative;
-  left: 45%;
+  left: 25%;
   color: rgb(168, 168, 168);
   background-color: rgb(255, 255, 255);
 }
@@ -160,11 +193,11 @@ scroll-view{
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  left: 48%;
+  position: fixed;
+  left: 70%;
   background-color: rgb(253, 152, 0);
   width: 25%;
-  height: 80%;
+  height: 6%;
   border-radius: 30px;
   color: #fff;
   font-size: 35rpx;

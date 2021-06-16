@@ -5,25 +5,27 @@
 <view class="details">
 <image src="{{goods.img}}"></image>
 <view>
-<text style="padding:10rpx">{{goods.txt}}</text>
-<text style="color:rgb(248, 131, 35)">{{goods.price}}</text>
+<text style="padding:10rpx">{{goods.name}}</text>
+<text style="color:rgb(248, 131, 35);margin:10rpx">{{goods.price}}</text>
 </view>
 </view>
 <!--商品相关参数-->
 <view class="details_list"> 
 <view class="param">
-<text>发货<text style="position:relative;left:20%">快递</text></text>
-<text>保障</text>
-<text>参数</text>
+  <text space="nbsp">发货地 珠海<text style="position:relative;left:20%">快递 免邮</text></text>
+  <text>保障 假一赔十</text>
+  <text>品牌 {{goods.brand}}</text>
+  <text>参数 {{goods.netwt}}</text>
+  <text>编号 {{goods.id}}</text>
 </view>
 </view>
 <!--导航栏-->
-<view class="nav"  bindtap="sum">
-<view style="font-size:35rpx" class=" b1_box"><view class=".t-icon .t-icon-kefu" ></view>客服</view>
+<view class="nav"  bindtap="addCart">
+<view style="font-size:35rpx" class=" b1_box" catchtap="phoneCall"><view class=".t-icon .t-icon-kefu" ></view>客服</view>
 <view style="font-size:35rpx" class=" b1_box"><view class=".t-icon .t-icon-shoucang"></view>收藏</view>
 <view id="cart" style="background-color:  rgb(248, 166, 12);color:rgb(238, 238, 238);border-radius:65rpx 0 0 65rpx" class="b_box " bindtap="change">加入购物车
 </view>
-<view id="shop" style="background-color: rgb(248, 106, 12);color:rgb(238, 238, 238);border-radius:0 65rpx 65rpx 0" class="b_box shop" catchtap="sum">立即购买
+<view id="shop" style="background-color: rgb(248, 106, 12);color:rgb(238, 238, 238);border-radius:0 65rpx 65rpx 0" class="b_box shop" catchtap="addOrder">立即购买
 </view>
 </view>
 <view class="shop_hide">
@@ -35,8 +37,8 @@
 </view>
 </view>
 <!--提示框-->
-<view class=" {{showView?'hide':'cart_message'}}">
-已加入购物车
-</view>
+<!--<view class=" {{showView?'hide':'cart_message'}}">
+{{boxText}}
+</view> !-->
 </scroll-view>
 

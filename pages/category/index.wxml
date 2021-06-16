@@ -11,11 +11,11 @@
   </scroll-view>
   <!--右栏-->
   <scroll-view scroll-y="true" class="right_menu" >
-    <view class="menu_list" wx:for="{{right_menu1}}" wx:for-index="index1" wx:for-item="item1" wx:if="{{currentIndex==index1}}">
+    <view class="menu_list" wx:for="{{right_menu}}" wx:for-index="index1" wx:for-item="item1" wx:if="{{currentIndex==index1}}">
     <navigator class="menu1_detail" wx:for="{{item1.menu}}"  wx:for-item="item2" bindtap="goodsDetail" data-index="{{item2}}" url="../goods_detail/index"  >
       <image class="png" src="{{item2.img}}"/>
       <view class="txt_container">
-      <view class="name">{{item2.txt}}</view>
+      <view class="name">{{item2.name}}</view>
       <view class="price">{{item2.price}}</view>
     </view>
     </navigator>

@@ -3,7 +3,7 @@
 <view class="search_input">
   <navigator url="/pages/search/index" open-type="navigate">
     <text class="iconfont icon-sousuo"></text>
-    <view class="xj" url="/pages/category/index"><text class="iconfont icon-xiangji"></text></view>
+    <view class="xj" catchtap="qrcode"><text class=".iconfont .icon-Group-"></text></view>
   </navigator>
 </view>
 

@@ -1,2 +1,63 @@
 <!--pages/order/index.wxml-->
-<text>pages/order/index.wxml</text>
+<!--标题栏-->
+<view class="title"><text>填写订单</text>
+<view class="backToCartStyle" bindtap="backToCart">返回上一页</view>
+</view>
+<!--信息栏-->
+<view class="messageAndAddress" bindtap="show">
+<text class=".t-icon .t-icon-address_icon iconAddress"></text>
+<view class="message_Address" wx:if="{{userName!=''&&phoneNumber!=''&&province!=''&&detailPosition!=''}}">
+<view class="userMessage">{{userName}}</view>
+<view class="userPhoneNumber">{{phoneNumber}}</view>
+<view class="defaultAddress">{{province}} {{city}} {{district}} {{mName}} {{detailPosition}}</view>
+</view>
+<view class="notWriteMessage" wx:else>
+<view>请完善相关配送信息!</view>
+<switch class="switchStyle" catchchange="switchDefault" catchtap="noneFn">是否选用默认信息</switch>
+</view>
+</view>
+<!--商品列表-->
+<scroll-view class="goodsOrder" scroll-y>
+<view wx:for="{{cartOrder}}" class="orderListStyle" wx:for-item = 'item1' data-index="{{index}}">
+<image class="png" src="{{item1.img}}"></image>
+<view class="txt_container">
+<view class="name">{{item1.txt}}</view>
+<view class="price_num">
+<view class="price">{{item1.price}}</view>
+<view class="sm_cur_nums">x {{item1.nums}}</view>
+</view>
+</view>
+</view>
+</scroll-view>
+<!--提交栏-->
+<view class="navigator">
+  <view class="total">总计：<text>{{total}}</text></view>
+  <view class="submitOrder" bindtap="handleSubmitOrder">提交订单</view>
+</view>
+<!--弹出框-->
+<page-container show="{{show}}" custom-style="height:40%;width:80%;position:fixed;left:10%;top:20%;border-radius:35px;border:solid;border-color:rgb(0, 255, 136);border-width:10px;" position="center bottom" overlay="true" round="true" overlay-style="background-color: rgba(0, 0, 0, 0.185)">
+<view class="inputMessage">
+<text style="margin-right:20rpx">收件人：</text>
+<input type="text" placeholder="收件人名称" focus="true" confirm-type="完成" class="inputStyle" bindblur="inputUser" bindconfirm="inputUser" maxlength="10"></input>
+</view>
+<view class="inputMessage">
+<text style="margin-right:20rpx">电话号码：</text>
+<input type="number" placeholder="电话号码" focus="true" confirm-type="完成" class="inputStyle" bindblur="inputPhoneNumber" bindconfirm="inputPhoneNumber" maxlength="11"></input>
+</view>
+<view class="locatedBtn" bindtap="getAddress" hidden="{{located_btn_hide}}">
+<text>选择地区</text>
+</view>
+<view class="located" hidden="{{located_hide}}">
+<text class="locatedText">{{province}} {{city}} {{district}}{{mName}}</text>
+<view class="reLocatedBtn" bindtap="getAddress" hidden="{{located_hide}}">
+<text>重新选择</text>
+</view>
+</view>
+<view class="inputMessage">
+<text style="margin-right:20rpx">楼层/单元:</text>
+<input type="text" placeholder="详细地址" focus="true" confirm-type="完成" class="inputStyle" 
+bindblur="inputDetailPosition" bindconfirm="inputDetailPosition"></input>
+</view>
+</page-container>
+
+

@@ -1,0 +1,33 @@
+page{
+  display: flex;
+  height: 100%;
+  background-color: rgb(241, 241, 241);
+  flex-direction: column;
+  align-items: center;
+}
+.title{
+  display: flex;
+  align-items: center;
+  font-size:50rpx;
+  font-weight: bolder;
+  color: rgb(56, 56, 56);
+  width: 100%;
+  height: 10%;
+  background-color: #fff;
+}
+.title text{
+  position: relative;
+  left: 10px;
+}
+.backToCartStyle{
+  position: relative;
+  left: 50%;
+font-size: 30rpx;
+color: rgb(255, 174, 0);
+font-weight: lighter;
+}
+.mapPng{
+  width: 100%;
+  height: 50%;
+  background-color: rgb(238, 238, 238);
+}

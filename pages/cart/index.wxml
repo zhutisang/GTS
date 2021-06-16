@@ -1,27 +1,30 @@
 <!--pages/cart/index.wxml-->
 <!--商品框-->
-<scroll-view scroll-y catchtap="close_sm">
-<view class="title" bindtap="onShow">购物车({{lists.length}})<view bindtap="manage">{{manage_text}}</view>
+<scroll-view scroll-y bindscrolltoupper="onPullDownRefresh">
+<view class="title" bindtap="onShow"><text>购物车({{lists.length}})</text>
+<view catchtap="manage">{{manage_text}}</view>
 </view>
 <checkbox-group class="group" bindchange="checkboxChange">
+<!--底部导航栏-->
 <view class="deal">
-<checkbox class="ck_box_all" checked="{{checkedValue}}" bindtap="checkboxChangeAll" disabled="{{all_check_true}}" >全选</checkbox>
-<view class="one_btn_del" bindtap="once_del">{{clear}}</view>
-<view class="deal_btn" bindtap="delete">{{deal_delete}}</view>
+<checkbox class="ck_box_all" checked="{{checkedValue}}" catchtap="checkboxChangeAll" disabled="{{all_check_true}}" >全选</checkbox>
+<view class="total">总计：<text>{{total}}</text></view>
+<view class="one_btn_del" catchtap="once_del">{{clear}}</view>
+<view class="deal_btn" catchtap="dealOrDelete">{{deal_delete}}</view>
 </view>
-<view class="cart_box" wx:for="{{lists}}" wx:for-item = 'item1' data-index="{{index}}" catchtap="get_index">
-<checkbox class="ck_box" value="{{item1.name}}" checked="{{item1.checked}}"></checkbox>
-<image class="png" src="{{item1.img}}" />
+<view class="cart_box" wx:for="{{lists}}" wx:for-item = 'item1' data-index="{{index}}" capture-bind:tap="get_index">
+<checkbox class="ck_box" value="{{item1.name}}" checked="{{item1.checked}}" bindtap="box_checked"></checkbox>
+<image class="png" src="{{item1.img}}"></image>
 <view class="txt_container" >
-<view class="name">{{item1.txt}}</view>
+<view class="name"><text>{{item1.name}}</text></view>
 <!--价格和数量-->
 <view class="price_num">
-<view class="price" >{{item1.sums}}</view>
-<view class="sm_cur_nums" hidden="{{s1}}" bindtap="nums_style_change" data-index="{{index}}">x {{item1.nums}}</view>
-<view class="cur_nums" hidden="{{s2}}">
-<view class=".t-icon .t-icon-jian" bindtap="minus_num" hidden="{{s2}}"></view>
-<view class="cur_num" hidden="{{s2}}" >{{item1.nums}}</view>
-<view class=".t-icon .t-icon-jia" bindtap="add_num" hidden="{{s2}}"></view>
+<view class="price" >{{item1.price}}</view>
+<view class="sm_cur_nums" hidden="{{item1.small}}" bindtap="nums_style_change" data-index="{{index}}">x {{item1.nums}}</view>
+<view class="cur_nums" hidden="{{item1.big}}">
+<view class=".t-icon .t-icon-jian" catchtap="minus_num" hidden="{{item1.big}}"></view>
+<view class="cur_num" hidden="{{item1.big}}" bindtap="close_sm">{{item1.nums}}</view>
+<view class=".t-icon .t-icon-jia" catchtap="add_num" hidden="{{item1.big}}"></view>
 </view>
 </view>
 </view >

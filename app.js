@@ -2,36 +2,54 @@ wx-App({
 data:{
   arr_goods:[],
     arr_goods1:[],
+    userinfo:{},
+    left_menu:[],
+    right_menu:[]
+    
 },
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
+  globalData:{
+    left_menu:[],
+    right_menu:[]
+  },
   onLaunch: function () {
-    
+    let that = this;
+    wx.request({
+      url: 'http://localhost:8080/getAllGoodsInfo02',
+      data:{},
+      dataType:'json',
+      header:{
+           "content-type":"application/json"
+      },
+      method:"POST",
+      success:function(res){
+        console.log(res)
+         console.log(JSON.parse( res.data.left_menu))
+         console.log(JSON.parse( res.data.right_menu))
+         wx.setStorageSync('left_menu',JSON.parse( res.data.left_menu) )
+         wx.setStorageSync('right_menu',JSON.parse( res.data.right_menu) )
+      },
+      fail(res){
+      }
+    })
   },
 
   /**
    * 当小程序启动，或从后台进入前台显示，会触发 onShow
    */
   onShow: function (options) {
-    
+    console.log(this.data.arr_goods)
+    console.log(this.data.arr_goods1)
   },
 cart:function(){
-    const sums = wx.getStorageSync("sum");
+    let sums = wx.getStorageSync("sum");
     const goods = wx.getStorageSync('goods');
     const nums = wx.getStorageSync('nums');
     const name = wx.getStorageSync('name');
-    // for(let i = 0 ; i < this.data.arr_goods ; i ++)
-    // {
-    //   console.log('3123')
-    //   if(name == this.data.arr_goods[i].name)
-    //   {
-    //     console.log('3123')
-    //     this.data.arr_goods[i].nums += nums
-    //     this.data.arr_goods[i].sums += sums
-    //   }
-    // }
-    this.data.arr_goods.unshift({name:name,nums:nums,sums,checked:''})
+    sums = Math.round((sums)*100)/100           
+    this.data.arr_goods.unshift({name:name,nums:nums,sums,checked:'',small:false,big:true,isopen:false})
     this.data.arr_goods1.unshift(goods);
 },
   /**

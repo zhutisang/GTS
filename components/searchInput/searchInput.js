@@ -18,6 +18,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+     qrcode:function(){
+      wx.scanCode({
+        onlyFromCamera: true,
+        scanType:'qrCode',
+      })
+     }
   }
 })

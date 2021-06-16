@@ -10,6 +10,8 @@ Page({
   onShow(){
     const userinfo = wx.getStorageSync("userinfo");
     this.setData({userinfo})
+    getApp().data.userinfo = userinfo
+    console.log(userinfo)
     if(userinfo != '')
     {
       this.setData({
@@ -27,7 +29,30 @@ Page({
       wx.navigateTo({
         url: '/pages/login/index',
       });
-      
-   
+  },
+  handleInfo:function(){
+     wx.navigateTo({
+       url: 'url',
+     })
+  },
+  handleOrder:function(){
+    wx.navigateTo({
+      url: '../dealList/index',
+    })
+  },
+  handleCollect:function(){
+    wx.navigateTo({
+      url: '../collect/index',
+    })
+  },
+  writeMessage:function(){
+    wx.navigateTo({
+      url: '../pause_order/index',
+    })
+  },
+  handAfterSale:function(){
+    wx.navigateTo({
+      url: '../after_sales/index',
+    })
   }
 })

@@ -41,6 +41,30 @@
           "pathName": "pages/goods_detail/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "结算页面",
+          "pathName": "pages/order/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/dealList/index",
+          "pathName": "pages/dealList/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/logistics/index",
+          "pathName": "pages/logistics/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/search_distribution/index",
+          "pathName": "pages/search_distribution/index",
+          "query": "",
+          "scene": null
         }
       ]
     }

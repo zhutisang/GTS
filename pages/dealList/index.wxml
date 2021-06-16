@@ -1,0 +1,31 @@
+<!--pages/pay/index.wxml-->
+<view class="title"><text>订单列表</text>
+<view class="backToCartStyle" bindtap="backToCart">返回购物车</view>
+</view>
+<scroll-view class="goodsOrder" scroll-y>
+<view  class="oneDeal" style="height:{{viewHeight+100}}px">    <!--调试-->
+ <!--<view wx:for="{{dealList.list}}" class="oneDeal" wx:for-item = 'item1' data-index="index" style="height:{{viewHeight+100}}px"> --> <!--从后端传参时使用-->
+<viwe class="dealWell">交易{{deal}}</viwe>              <!--交易成功/失败-->
+<view wx:for="{{dealList.list}}" wx:for-item="item2" data-index = "index1" class="orderListStyle">
+<image class="png" src="{{item2.img}}"></image>
+<view class="txt_container">
+<view class="name">{{item2.txt}}</view>
+<view class="price_num">
+<view class="price">{{item2.price}}</view>
+<view class="sm_cur_nums">x {{item2.nums}}</view>
+</view>
+</view>
+</view>
+<view class="orderTotal">实付款：{{dealList.total}}</view>
+<view class="bottomBox">
+<view class="deleteOrder" bindtap="deleteDealOrder">删除订单</view>
+<view class="LogisticslMessage" bindtap="showLogisticsMessage">查看物流
+</view><view class="pauseOrder" bindtap="pauseDealOrder">取消订单</view>
+</view>
+</view>
+</scroll-view>
+<page-container show="{{show}}" custom-style="height:40%;width:80%;position:fixed;left:10%;top:20%;border-radius:35px;border:solid;border-color:rgb(0, 255, 136);border-width:10px;" position="center bottom" overlay="true" round="true" overlay-style="background-color: rgba(0, 0, 0, 0.185)">
+<view></view>
+</page-container>
+
+
