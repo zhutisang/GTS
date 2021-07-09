@@ -1,2 +1,15 @@
 <!--pages/goodS_list/index.wxml-->
-<text>pages/goodS_list/index.wxml</text>
+<view class="title"><text>{{title}}</text></view>
+<scroll-view class="goodsOrder" scroll-y>
+<view wx:for="{{lists}}" class="orderListStyle" wx:for-item = 'item1' data-index="{{index}}" bindtap="toDetail">
+<image class="png" src="{{item1.img}}"></image>
+<view class="txt_container">
+<view class="name">{{item1.name}}</view>
+<view class="price_num">
+<view class="price">{{item1.price}}</view>
+</view>
+</view>
+</view>
+</scroll-view>
+
+

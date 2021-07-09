@@ -69,14 +69,26 @@ Page({
                     //牛奶
             }
         ],
+        index:''
 
     },
     handleItemTap:function (e){
+        console.log(this.data.index)
+        console.log(e)
+        wx.setStorageSync('index', this.data.index)
         wx.navigateTo({
           url: '../goodS_list/index',
         })
         },
+       getIndex:function(e){
+          console.log(e)
+          this.setData({
+              index:e.currentTarget.dataset.index
+          })
+       },
+       getList:function(){
 
+       },
     /**
      * 生命周期函数--监听页面加载
      */

@@ -18,10 +18,8 @@
 
 <!--分类start-->
 <view class="index_category" >
-<view url="../goodS_list/index">
-  <block wx:key="unique" wx:for="{{category}}" wx:for-index="index" >
+<view  wx:key="unique" wx:for="{{category}}" data-index="{{index}}" class="caterImg" capture-bind:tap="getIndex">
   <image src="{{item.img}}" bindtap="handleItemTap" /> 
-  </block>
   </view>
 </view>
 <!--分类end-->
@@ -36,8 +34,8 @@
 <view class="index_floor_box">
 <view class="index_floor">
  <!--图片-->
-  <view class="floor_group" wx:for="{{floor}}" wx:for-index="index" >
-    <image  src="{{item.img}}"/>
+  <view class="floor_group" wx:for="{{floor}}" wx:for-index="{{index}}" >
+    <image  src="{{item.img}}" />
    <!--商品介绍-->
     <view class="floor_txt">{{item.txt}}</view>
     <!--商品价格-->

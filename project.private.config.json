@@ -65,6 +65,24 @@
           "pathName": "pages/search_distribution/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/goodS_list/index",
+          "pathName": "pages/goodS_list/index",
+          "query": "",
+          "scene": null
         }
       ]
     }

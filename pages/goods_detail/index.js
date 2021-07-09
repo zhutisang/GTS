@@ -96,9 +96,9 @@ Page({
     }
     else
     {
-      let orderSum = this.data.nums * goods.price.substring(1,7);
+      let orderSum = this.data.nums * goods.price;
       let orderGoods = [goods]
-      orderGoods[0].name = goods.txt
+      orderGoods[0].name = goods.name
       orderGoods[0].nums = this.data.nums
       orderGoods[0].sum = orderSum
       console.log(orderGoods)
@@ -129,9 +129,11 @@ Page({
      showView:(options.showView == "true" ? true :false);
      let pages = getCurrentPages();
      let prepage = pages[pages.length - 2];
-     this.setData({
+     if(prepage != null){
+       this.setData({
       from_path:prepage.route
      })
+     }
   },
 
   /**

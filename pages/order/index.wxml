@@ -21,7 +21,7 @@
 <view wx:for="{{cartOrder}}" class="orderListStyle" wx:for-item = 'item1' data-index="{{index}}">
 <image class="png" src="{{item1.img}}"></image>
 <view class="txt_container">
-<view class="name">{{item1.txt}}</view>
+<view class="name">{{item1.name}}</view>
 <view class="price_num">
 <view class="price">{{item1.price}}</view>
 <view class="sm_cur_nums">x {{item1.nums}}</view>

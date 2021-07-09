@@ -192,8 +192,6 @@ Page({
 
     //   }
     // })
-    
-    
     this.setData({
       left_menu:wx.getStorageSync('left_menu'),
       right_menu:wx.getStorageSync('right_menu')

@@ -20,18 +20,24 @@ page{
 /* end 轮播图*/
 /* 导航栏 */
 .index_category {
-  display: flex;
+  position: relative;
+  left: 2.5%;
+  top:50%;
   height: 370rpx;
-  width: 100%;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .index_category view {
-
-  padding: 1px 0px 0px 7px;
+  margin:10rpx;
+  width: 22.25%;
+  height: 42%;
   justify-content: center;
 }
 .index_category view image {
-  width: 179rpx;
-  height: 178rpx;
+  width: 100%;
+  height: 100%;
   background-color: #fff;
   border-radius: 100rpx;
   margin: 1px;
@@ -39,10 +45,11 @@ page{
 .index_title{
   display: flex;
   justify-content: center;
+  align-items: center;
   border-style: solid;
   border-color:rgb(241, 241, 241);
   width:300rx ;
-  height: 200rpx;
+  height: 150rpx;
 }
 .index_title image{
   width: 50%;

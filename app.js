@@ -4,7 +4,9 @@ data:{
     arr_goods1:[],
     userinfo:{},
     left_menu:[],
-    right_menu:[]
+    right_menu:[],
+    dealListView:[],
+    personPhone:13924680329
     
 },
   /**
@@ -30,8 +32,9 @@ data:{
          console.log(JSON.parse( res.data.right_menu))
          wx.setStorageSync('left_menu',JSON.parse( res.data.left_menu) )
          wx.setStorageSync('right_menu',JSON.parse( res.data.right_menu) )
+         
       },
-      fail(res){
+      fail(){
       }
     })
   },
@@ -40,8 +43,9 @@ data:{
    * 当小程序启动，或从后台进入前台显示，会触发 onShow
    */
   onShow: function (options) {
-    console.log(this.data.arr_goods)
-    console.log(this.data.arr_goods1)
+    this.data.left_menu = wx.getStorageSync('left_menu')
+         this.data.right_menu =  wx.getStorageSync('right_menu')
+         
   },
 cart:function(){
     let sums = wx.getStorageSync("sum");

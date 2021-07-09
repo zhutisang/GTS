@@ -188,6 +188,18 @@ Page({
   },
   //全选
   checkboxChangeAll:function(){
+    // if(this.data.lists.length == 1 && this.data.lists[0].checked == true)
+    // {
+    //   this.setData({
+    //      checkedValue:true
+    //   })
+    // }
+    // else
+    // {
+    //   this.setData({
+    //     checkedValue:false
+    //  })
+    // }
     //当全选按钮没被选中
     if(this.data.checkedValue != true){
       for(let i = 0 ;i < this.data.lists.length ; i++)

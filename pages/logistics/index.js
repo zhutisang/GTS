@@ -1,4 +1,6 @@
 // pages/about/about.js
+var QQMapWX = require('../../libs/qqmap-wx-jssdk');
+var qqmapsdk;
 Page({
  
   /**
@@ -78,25 +80,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    qqmapsdk = new QQMapWX({
+            key: 'LVCBZ-6QRCO-CAQW7-SEQTL-KQQMS-5OB6T'
+        });
     let that = this;
-   wx.getLocation({
-     altitude: 'altitude',
-     highAccuracyExpireTime: 0,
-     isHighAccuracy: true,
-     type: 'wgs84',
-     success: (res) => {
-       let logisticsList =  wx.getStorageSync('dealList')
-       console.log(logisticsList)
-       that.setData({
-         'polyline[0].points[1].latitude':logisticsList.latitude,
-         'polyline[0].points[1].longitude':logisticsList.longitude,
-         'points[0].latitude':logisticsList.latitude,
-         'points[0].longitude':logisticsList.longitude
-       })
-       console.log()
-     },
+  //  wx.getLocation({
+  //    altitude: 'altitude',
+  //    highAccuracyExpireTime: 0,
+  //    isHighAccuracy: true,
+  //    type: 'wgs84',
+  //    success: (res) => {
+  //      let logisticsList =  wx.getStorageSync('dealList')
+  //      console.log(logisticsList)
+  //      that.setData({
+  //        'polyline[0].points[1].latitude':logisticsList.latitude,
+  //        'polyline[0].points[1].longitude':logisticsList.longitude,
+  //        'points[0].latitude':logisticsList.latitude,
+  //        'points[0].longitude':logisticsList.longitude
+  //      })
+  //      console.log()
+  //    },
      
-   })
+  //  })
   },
   backToCart:function(){
     wx.navigateBack({
@@ -114,7 +119,18 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+  qqmapsdk.search({
+            keyword: '酒店',
+            success: function (res) {
+                console.log(res);
+            },
+            fail: function (res) {
+                console.log(res);
+            },
+        complete: function (res) {
+            console.log(res);
+        }
+     });
   },
  
   /**

@@ -23,9 +23,9 @@ Page({
     userName:'',   //收货人
     phoneNumber:'',  //电话
     detailPosition:'',  //具体位置
-    cartOrder:[],       //已完成的订单列表
+    cartOrder:[],       //传给后端的已完成的单个订单列表
     total:'',           //总价
-    from_path:''        //上一级页面路径
+    from_path:'',        //上一级页面路径
   },
   
   /**
@@ -124,15 +124,53 @@ Page({
         longitude:this.data.longitude,   
         latitude:this.data.latitude,   
       }
-      wx.setStorageSync('dealList', dealList)
+      console.log(this.data.cartOrder)
+
+      let shoppingListUnits = this.data.cartOrder;
+      let  consignNum = this.data.phoneNumber;
+      let consignAddress = this.data.province+this.data.city+this.data.district+this.data.mName+this.data.detailPosition;
+      console.log(shoppingListUnits)
+      for(let i = 0 ; i < shoppingListUnits.length ; i ++)
+      {
+        delete shoppingListUnits[i].big;
+        delete shoppingListUnits[i].checked;
+        delete shoppingListUnits[i].img;
+        delete shoppingListUnits[i].isopen;
+        delete shoppingListUnits[i].netwt;
+        delete shoppingListUnits[i].origin;
+        delete shoppingListUnits[i].price;
+        delete shoppingListUnits[i].quantity;
+        delete shoppingListUnits[i].small;
+        delete shoppingListUnits[i].sums;
+        delete shoppingListUnits[i].type;
+        delete shoppingListUnits[i].brand;
+        shoppingListUnits[i].goodsId = shoppingListUnits[i].id;
+        shoppingListUnits[i].amount = shoppingListUnits[i].nums;
+        shoppingListUnits[i].goodsName = shoppingListUnits[i].name;
+        delete shoppingListUnits[i].id;
+        delete shoppingListUnits[i].nums;
+        delete shoppingListUnits[i].name;
+      }
+      const app = getApp().data 
+      getApp().data.dealListView.unshift(dealList)
+      let dealListView = getApp().data.dealListView
+      let personPhone = app.personPhone;
+      console.log(app.personPhone)
+      wx.setStorageSync('dealListView', dealListView)
       wx.request({
-        url: 'url',
+        url: 'http://localhost:8080/placeAnOrder',
         method:"POST",
+        // header: {
+        //   'content-type': 'application/x-www-form-irlencoded'
+        //   },
         data:{
-          //dealList:dealList
+          shoppingListUnits:shoppingListUnits,
+          personPhone:personPhone,
+          consignNum:consignNum,
+          consignAddress:consignAddress
         },
         success:function(res){
-
+  
         }
       })
        wx.switchTab({
@@ -178,7 +216,7 @@ Page({
       from_path:prepage.route
      })
      const userinfo = wx.getStorageSync('userinfo',userinfo)
-     const cartOrder = wx.getStorageSync('cartOrder',cartOrder)
+     let cartOrder = wx.getStorageSync('cartOrder',cartOrder)
      const total = wx.getStorageSync('total',total)
      this.setData({
        userinfo:userinfo,
